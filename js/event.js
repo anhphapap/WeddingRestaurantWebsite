@@ -13,6 +13,16 @@ window.onload = () => {
       m.classList.toggle("bx-x");
     });
   }
+   // Email effect 
+   let email=document.querySelector(".footer-email");
+   let eplace=document.querySelector(".place-email");
+   email.addEventListener("focus",()=>{
+     eplace.classList.add("act-e");
+   });
+   email.addEventListener("focusout",()=>{
+     eplace.classList.remove("act-e");
+   });
+ 
   //Data event
   let listEvent = document.querySelector(".list-event");
   fetch("../data/event.json")
