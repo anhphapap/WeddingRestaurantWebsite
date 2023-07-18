@@ -47,6 +47,8 @@ window.onload = () => {
     // });
   }
 
+  
+
   //Data event
   let listEvent = document.querySelector(".list-event");
   fetch("../data/event.json")
