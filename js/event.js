@@ -47,11 +47,9 @@ window.onload = () => {
     // });
   }
 
-  
-
   //Data event
   let listEvent = document.querySelector(".list-event");
-  fetch("../data/event.json")
+  fetch("../../data/event.json")
     .then((res) => res.json())
     .then((data) => {
       for (let e of data) {
