@@ -87,3 +87,10 @@ window.onload = () => {
     };
   }
 };
+
+$(window).ready(()=>{
+  $(".select").focus(function(){
+    $(".select").parent().css("color","var(--text)");
+    $(this).parent().css("color","var(--text2)");
+  })
+});

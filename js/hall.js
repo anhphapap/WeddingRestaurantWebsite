@@ -49,25 +49,25 @@ window.onload = () => {
   }
 
   //Hall effect
-  let x = window.innerWidth;
-  if (x > 768) {
-    let hallEffect = document.querySelectorAll(".hall-item");
-    hallEffect[2].classList.add("active-hall");
-    for (let i = 0; i < hallEffect.length; i++) {
-      hallEffect[i].addEventListener("click", () => {
-        if (hallEffect[i].classList.contains("active-hall")) {
-          hallEffect[i].classList.remove("active-hall");
-        } else {
-          for (let j = 0; j < hallEffect.length; j++) {
-            if (i !== j && hallEffect[j].classList.contains("active-hall")) {
-              hallEffect[j].classList.remove("active-hall");
-            }
-          }
-          hallEffect[i].classList.add("active-hall");
-        }
-      });
-    }
-  }
+  // let x = window.innerWidth;
+  // if (x > 768) {
+  //   let hallEffect = document.querySelectorAll(".hall-item");
+  //   hallEffect[2].classList.add("active-hall");
+  //   for (let i = 0; i < hallEffect.length; i++) {
+  //     hallEffect[i].addEventListener("click", () => {
+  //       if (hallEffect[i].classList.contains("active-hall")) {
+  //         hallEffect[i].classList.remove("active-hall");
+  //       } else {
+  //         for (let j = 0; j < hallEffect.length; j++) {
+  //           if (i !== j && hallEffect[j].classList.contains("active-hall")) {
+  //             hallEffect[j].classList.remove("active-hall");
+  //           }
+  //         }
+  //         hallEffect[i].classList.add("active-hall");
+  //       }
+  //     });
+  //   }
+  // }
 
   //Hide nav
   const nav = document.querySelector(".nav-bar");
@@ -109,3 +109,19 @@ window.onload = () => {
     };
   }
 };
+
+$(window).ready(()=>{
+  $(".hall-item").click(function(){
+    if($(this).hasClass("active-hall")){
+      $(this).removeClass("active-hall");
+    }
+    else{
+      $(".hall-item").removeClass("active-hall");
+      $(this).addClass("active-hall");
+    }
+  })
+  $(".select").focus(function(){
+    $(".select").parent().css("color","var(--text)");
+    $(this).parent().css("color","var(--text2)");
+  })
+})

@@ -49,7 +49,7 @@ window.onload = () => {
 
   //Data event
   let listEvent = document.querySelector(".list-event");
-  fetch("../../data/event.json")
+  fetch("../event.json")
     .then((res) => res.json())
     .then((data) => {
       for (let e of data) {
@@ -108,3 +108,10 @@ window.onload = () => {
     };
   }
 };
+
+$(window).ready(()=>{
+  $(".select").focus(function(){
+    $(".select").parent().css("color","var(--text)");
+    $(this).parent().css("color","var(--text2)");
+  })
+});
