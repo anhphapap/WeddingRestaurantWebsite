@@ -1,7 +1,8 @@
 window.onload = () => {
   // On Title Hover
-  let onHover = document.getElementById("nav-event");
+  let onHover = document.getElementById("nav-contact");
   onHover.classList.add("onHover");
+
   //On Toggle Menu
   let menu = document.querySelectorAll("#menu-icon");
   let toggle = document.querySelector(".toggle-menu");
@@ -46,28 +47,6 @@ window.onload = () => {
     //   eplace.classList.remove("active-input");
     // });
   }
-
-  //Data event
-  let listEvent = document.querySelector(".list-event");
-  fetch("./event.json")
-    .then((res) => res.json())
-    .then((data) => {
-      for (let e of data) {
-        let event = `<div class="event-item">
-    <div class="event-content">
-        <h1 class="event-title">${e.title}</h1>
-        <div class="event-line"></div>
-        <p class="event-disc">${e.description}</p>
-    </div>
-    <div class="event-img">
-        <div>
-            <img src="${e.image}" alt="" class="event-image">
-        </div>
-    </div>
-</div>`;
-        listEvent.insertAdjacentHTML("beforeend", event);
-      }
-    });
   //Hide nav
   const nav = document.querySelector(".nav-bar");
   const nav1 = document.querySelector(".nav-bar1");
@@ -109,9 +88,9 @@ window.onload = () => {
   }
 };
 
-$(window).ready(()=>{
-  $(".select").focus(function(){
-    $(".select").parent().css("color","var(--text)");
-    $(this).parent().css("color","var(--text2)");
-  })
+$(window).ready(() => {
+  $(".select").focus(function () {
+    $(".select").parent().css("color", "var(--text)");
+    $(this).parent().css("color", "var(--text2)");
+  });
 });
