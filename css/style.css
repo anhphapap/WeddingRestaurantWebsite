@@ -255,8 +255,7 @@ body {
 .footer-wrapper {
   justify-content: space-evenly !important;
   padding: 30px;
-  border-bottom: 1px solid white;
-  margin-bottom: 30px;
+  /* border-bottom: 1px solid white; */
   align-items: flex-start !important;
   gap: 10px;
 }
@@ -275,7 +274,9 @@ body {
   width: 16%;
 }
 .footer-bottom {
-  width: 100%;
+  width: 90%;
+  padding-top: 30px;
+  border-top: 1px solid white;
 }
 
 /* Nav first  */
@@ -513,6 +514,7 @@ section {
 .home-title {
   position: relative;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .title-down {
   position: absolute;
@@ -893,10 +895,11 @@ tr:hover {
 }
 .contact-box {
   width: 50%;
-  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.20);
+  box-shadow: 0px 20px 50px 0px rgba(79, 119, 255, 0.20);
   border-radius: 10px;
   padding: 1rem;
   border-top: 3px solid var(--primary-color);
+  background-color: white;
 }
 .box-title{
   font-size: 2rem;
@@ -924,7 +927,7 @@ tr:hover {
   left: 1rem;
   top: 0;
   transform: translateY(-50%);
-  background-color: var(--secondary-color);
+  background-color: white;
   z-index: 3;
 }
 .contact-fixed{
@@ -939,6 +942,48 @@ tr:hover {
 .contact-fixed::before{
   background-color: white;
 }
+
+/* Sale Page  */
+.sale{
+  padding: 2rem;
+  background-color: white;
+}
+.sale-list{
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+.sale-item{
+  width: 30%;
+  box-shadow: 0px 20px 50px 0px rgba(79, 119, 255, 0.20);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.sale-img{
+  width: 100%;
+}
+.sale-content{
+  padding: 1rem;
+}
+.sale-title{
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+  transition: 0.35s;
+  cursor:pointer;
+}
+.sale-title:hover{
+  color: var(--text2);
+}
+.sale-disc{
+  color: var(--text);
+  text-overflow: ellipsis;
+}
+
 
 /* Responsive */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -1041,6 +1086,12 @@ tr:hover {
   .contact-info{
     width: auto;
   }
+  .sale-item{
+    width: 45%;
+  }
+  .sale{
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1127,6 +1178,9 @@ tr:hover {
   }
   .hall-item {
     width: 95%;
+  }
+  .sale-item{
+    width: 90%;
   }
 }
 @media screen and (max-width: 400px) {
@@ -1246,5 +1300,11 @@ tr:hover {
   }
   .service-title {
     font-size: 1.5rem;
+  }
+  .btn2:hover span{
+    color: var(--primary-color) !important;
+  }
+  .btn2{
+    border: 2px solid var(--primary-color);
   }
 }
