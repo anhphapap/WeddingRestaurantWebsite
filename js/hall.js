@@ -69,16 +69,20 @@ window.onload = () => {
   //   }
   // }
 
-  //Hide nav
+  //Hide nav & go top
   const nav = document.querySelector(".nav-bar");
   const nav1 = document.querySelector(".nav-bar1");
-  if (window.pageYOffset >= 10) {
-    nav.classList.remove("hide");
-    nav1.classList.add("hide");
-  } else {
-    nav.classList.add("hide");
-    nav1.classList.remove("hide");
-  }
+  const goTop=document.querySelector(".go-top");
+  goTop.addEventListener("click",()=>{
+    document.body.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+    document.documentElement.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  })
   window.addEventListener(
     "scroll",
     debounceFn(function (e) {
@@ -89,6 +93,14 @@ window.onload = () => {
       } else {
         nav.classList.add("hide");
         nav1.classList.remove("hide");
+      }
+      if (scrollY >= 400)
+      {
+        goTop.classList.remove("hide");
+      }
+      else
+      {
+        goTop.classList.add("hide");
       }
     }, 10)
   );

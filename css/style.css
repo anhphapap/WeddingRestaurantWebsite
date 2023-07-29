@@ -56,6 +56,51 @@ body {
   font-size: 3rem;
   font-weight: 400;
 }
+.go-top{
+  position: fixed;
+  bottom: 1rem;
+  right: 0.5rem;
+  z-index: 10;
+  font-size: 2rem;
+  padding: 0.5rem;
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 100rem;
+  box-shadow: 5px 5px 5px rgb(0,0,0,0.2);
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.go-top::before{
+  content: "Back to top";
+  font-size: 8px;
+  color: var(--text2);
+  position: absolute;
+  left:0;
+  right:0;
+  z-index: 10;
+  top: -1rem;
+  opacity: 0;
+  transition: 0.5s;
+}
+.go-top i{
+  transition: 0.5s;
+}
+.go-top:hover::before{
+  opacity: 1;
+}
+.go-top:hover i{
+  animation: up-to-top 0.75s 2;
+}
+@keyframes up-to-top {
+  0%{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100%{
+    opacity: 1;
+  }
+}
 /* Input box  */
 .input {
   display: block;
@@ -895,7 +940,8 @@ tr:hover {
 }
 .contact-box {
   width: 50%;
-  box-shadow: 0px 20px 50px 0px rgba(79, 119, 255, 0.20);
+  /* box-shadow: 0px 20px 50px 0px rgba(79, 119, 255, 0.20); */
+  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
   border-radius: 10px;
   padding: 1rem;
   border-top: 3px solid var(--primary-color);
@@ -926,7 +972,7 @@ tr:hover {
   color: var(--text2) !important;
   left: 1rem;
   top: 0;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
   background-color: white;
   z-index: 3;
 }
@@ -956,10 +1002,14 @@ tr:hover {
 }
 .sale-item{
   width: 30%;
-  box-shadow: 0px 20px 50px 0px rgba(79, 119, 255, 0.20);
+  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 2rem;
+  transition: 0.4s;
+}
+.sale-item:hover{
+  transform: translateY(-0.5rem);
 }
 .sale-img{
   width: 100%;
@@ -976,7 +1026,7 @@ tr:hover {
   transition: 0.35s;
   cursor:pointer;
 }
-.sale-title:hover{
+.sale-item:hover .sale-title{
   color: var(--text2);
 }
 .sale-disc{
