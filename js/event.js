@@ -49,12 +49,12 @@ window.onload = () => {
 
   //Data event
   let listEvent = document.querySelector(".list-event");
-  fetch("./event.json")
+  fetch("data/event.json")
     .then((res) => res.json())
     .then((data) => {
       for (let e of data) {
-        let event = `<div class="event-item">
-    <div class="event-content">
+        let event = `<div class="event-item ">
+    <div class="event-content wow animate__animated animate__fadeInUp">
         <h1 class="event-title">${e.title}</h1>
         <div class="event-line"></div>
         <p class="event-disc">${e.description}</p>

@@ -15,6 +15,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      wow = new WOW({
+        boxClass: "wow", // default
+        animateClass: "animate__animated", // default
+        offset: 0, // default
+        mobile: true, // default
+        live: true, // default
+      });
+      wow.init();
+      new WOW().init();
+    </script>
   </head>
   <body>
     <header class="header">
@@ -120,7 +132,7 @@
         </nav>
       </div>
       <button class="go-top flex hide">
-        <i class='bx bx-chevrons-up'></i>
+        <i class="bx bx-chevrons-up"></i>
       </button>
     </header>
     <section class="home flex" id="home">
@@ -132,15 +144,19 @@
             thân thiện của cung cách phục vụ, mức độ hài lòng từ phong cách ẩm
             thực, sự tinh tế đến từng những chi tiết nhỏ nhất.
           </p>
-          <h1 class="title-name">Alpha Palace</h1>
+          <h1 class="title-name wow animate__animated animate__fadeInDown">
+            Alpha Palace
+          </h1>
         </div>
       </div>
     </section>
     <section class="home-locate flex">
-      <div class="home-locate-img">
+      <div class="home-locate-img wow animate__animated animate__fadeInLeft">
         <img src="./images/home1.jpg" alt="home1" />
       </div>
-      <div class="home-locate-content">
+      <div
+        class="home-locate-content wow animate__animated animate__fadeInRight"
+      >
         <div class="home-title">
           <h2>Địa điểm</h2>
           <h3 class="title-down">Lý Tưởng</h3>
@@ -212,19 +228,19 @@
       </div>
     </section>
     <section class="home-service">
-      <div class="home-title">
+      <div class="home-title wow animate__animated animate__fadeInDown">
         <h2>Dịch vụ</h2>
         <h3 class="title-down">Đẳng Cấp</h3>
       </div>
-      <div class="line">
+      <div class="line wow animate__animated animate__fadeInUp">
         <img src="./images/text2-line.png" alt="text2-line" />
       </div>
       <div class="service-list">
         <div class="service-item">
-          <div class="service-img">
+          <div class="service-img wow animate__animated animate__fadeIn">
             <img src="./images/diamond.jpg" alt="" />
           </div>
-          <div class="service-content">
+          <div class="service-content wow animate__animated animate__fadeIn">
             <span class="service-title">Sảnh tiệc</span>
             <p class="service-desc">
               Được thiết kế đa dạng phong cách, mang đến không gian sang trọng,
@@ -238,10 +254,10 @@
           </div>
         </div>
         <div class="service-item">
-          <div class="service-img">
+          <div class="service-img wow animate__animated animate__fadeIn">
             <img src="./images/hall-top.jpg" alt="" />
           </div>
-          <div class="service-content">
+          <div class="service-content wow animate__animated animate__fadeIn">
             <span class="service-title">Sự Kiện - Tiệc</span>
             <p class="service-desc">
               Với nhiều năm kinh nghiệm trong lĩnh vực tổ chức đa dạng các loại
@@ -254,13 +270,15 @@
           </div>
         </div>
         <div class="service-item">
-          <div class="service-img">
+          <div class="service-img wow animate__animated animate__fadeIn">
             <img src="./images/sale-tan-nien-service.jpg" alt="" />
           </div>
-          <div class="service-content">
+          <div class="service-content wow animate__animated animate__fadeIn">
             <span class="service-title">Ưu Đãi</span>
             <p class="service-desc">
-              Những ưu đãi cho các sự kiện cực kỳ hấp dẫn, kèm theo nhiều quà tặng đặc biệt cho tiệc cưới. Alpha Palace luôn đồng hành cùng Dâu Rể mang đến sự trọn vẹn cho ngày trọng đại.
+              Những ưu đãi cho các sự kiện cực kỳ hấp dẫn, kèm theo nhiều quà
+              tặng đặc biệt cho tiệc cưới. Alpha Palace luôn đồng hành cùng Dâu
+              Rể mang đến sự trọn vẹn cho ngày trọng đại.
             </p>
             <div class="button service-fixed">
               <a class="fixed_a" href="./sale.html">Xem thêm</a>

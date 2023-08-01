@@ -15,6 +15,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      wow = new WOW(
+      {
+        boxClass:     'wow',      // default
+        animateClass: 'animate__animated', // default
+        offset:       0,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      }
+      )
+      wow.init();
+      new WOW().init();
+    </script>
   </head>
   <body>
     <header class="header">
@@ -127,15 +141,15 @@
         <h1 class="title">Ưu Đãi</h1>
     </section>
     <section class="sale">
-      <div class="home-title">
+      <div class="home-title wow animate__animated animate__fadeInDown">
         <h2>Ưu Đãi</h2>
         <h3 class="title-down">Ngập Tràn</h3>
       </div>
-      <div class="line">
+      <div class="line wow animate__animated animate__fadeInUp">
         <img src="./images/text2-line.png" alt="text2-line" />
       </div>
       <div class="sale-list flex">
-        <div class="sale-item">
+        <div class="sale-item wow animate__animated animate__fadeInUp">
           <img src="./images/sale-love-summer.jpg" alt="" class="sale-img">
           <div class="sale-content">
             <p class="sale-title">LOVE SUMMER 429,000/KHÁCH</p>
@@ -144,7 +158,7 @@
             </p>
           </div>
         </div>
-        <div class="sale-item">
+        <div class="sale-item wow animate__animated animate__fadeInUp">
           <img src="./images/sale-tiec-cuoi2.jpg" alt="" class="sale-img">
           <div class="sale-content">
             <p class="sale-title">ƯU ĐÃI CƯỚI 2023</p>
@@ -153,7 +167,7 @@
             </p>
           </div>
         </div>
-        <div class="sale-item">
+        <div class="sale-item wow animate__animated animate__fadeInUp">
           <img src="./images/sale-tet.jpg" alt="" class="sale-img">
           <div class="sale-content">
             <p class="sale-title">ƯU ĐÃI TIỆC ĐẦU NĂM 2023</p>
@@ -162,7 +176,7 @@
             </p>
           </div>
         </div>
-        <div class="sale-item">
+        <div class="sale-item wow animate__animated animate__fadeInUp">
           <img src="./images/sale-tiec-cuoi.jpg" alt="" class="sale-img">
           <div class="sale-content">
             <p class="sale-title">TIỆC CƯỚI TRỌN GÓI 4,290,000Đ/BÀN</p>
@@ -171,7 +185,7 @@
             </p>
           </div>
         </div>
-        <div class="sale-item">
+        <div class="sale-item wow animate__animated animate__fadeInUp">
           <img src="./images/sale-tan-nien.jpg" alt="" class="sale-img">
           <div class="sale-content">
             <p class="sale-title">TÂN NIÊN NHƯ Ý - KHAI XUÂN PHÚ QUÝ</p>
@@ -180,7 +194,7 @@
             </p>
           </div>
         </div>
-        <div class="sale-item">
+        <div class="sale-item wow animate__animated animate__fadeInUp">
           <img src="./images/Sale-sinh-nhat.jpg" alt="" class="sale-img">
           <div class="sale-content">
             <p class="sale-title">SINH NHẬT VÀNG</p>
