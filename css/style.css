@@ -751,7 +751,7 @@ section {
   scale: 1.2;
 }
 .event-item:hover .event-line {
-  width: 50%;
+  width: 60%;
 }
 .event-img {
   max-width: calc(100% / 3);

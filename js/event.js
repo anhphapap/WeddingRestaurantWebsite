@@ -54,7 +54,7 @@ window.onload = () => {
     .then((data) => {
       for (let e of data) {
         let event = `<div class="event-item ">
-    <div class="event-content wow animate__animated animate__fadeInUp">
+    <div class="event-content">
         <h1 class="event-title">${e.title}</h1>
         <div class="event-line"></div>
         <p class="event-disc">${e.description}</p>

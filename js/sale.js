@@ -33,6 +33,25 @@ window.onload = () => {
         advice.classList.remove("active-advice");
       });
     }
+
+    // Fetch data 
+    let saleList=document.querySelector(".sale-list")
+    fetch("data/sale.json").then(res => res.json()).then(data =>{
+      for(let d of data)
+      {
+        saleList.insertAdjacentHTML("beforeend",`
+        <div class="sale-item wow animate__animated animate__fadeInUp">
+          <img src="${d.img}" alt="" class="sale-img">
+          <div class="sale-content">
+            <p class="sale-title">${d.title}</p>
+            <p class="sale-disc">
+              ${d.content}
+            </p>
+          </div>
+        </div>
+        `)
+      }
+    })
   
     //Input effect
     let wrap = document.querySelectorAll(".wrapper-input");
