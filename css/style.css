@@ -101,6 +101,62 @@ body {
     opacity: 1;
   }
 }
+
+/* Right contact  */
+.right-contact{
+  position: fixed;
+  top:50%;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgba(232, 232, 232,0.5);
+  border-radius: 5px 0 0 5px;
+  padding: 0.5rem;
+  transform: translateY(-50%) translateX(60%);
+  transition: .2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.right-contact:hover{
+  transform: translateY(-50%) translateX(0);
+}
+.card-contact a{
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  color: #0777e9;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+.card-contact:nth-child(2) a{
+  color: #cc39a4;
+  background-color: white;
+}
+.card-contact:nth-child(3) a{
+  color: black;
+  background-color: white;
+}
+.card-contact:first-child:hover a{
+  scale: 1.1;
+  color: white;
+  background-color: #0777e9;
+}
+.card-contact:nth-child(2):hover a{
+  scale: 1.1;
+  color: white;
+  background-color: #cc39a4;
+}
+.card-contact:nth-child(3):hover a{
+  scale: 1.1;
+  color: white;
+  background-color: black;
+}
+
 /* Input box  */
 .input {
   display: block;
@@ -336,7 +392,7 @@ body {
   padding: 0 3%;
 }
 .logo-white {
-  max-width: 170px;
+  max-width: 160px;
   padding: 15px 0;
   border-radius: 100rem;
 }
@@ -1318,6 +1374,9 @@ tr:hover {
   .box-title{
     font-size: 1.5rem;
   }
+  .right-contact{
+    display: none;
+  }
 }
 @media screen and (max-width: 900px) {
   .nav-item {
@@ -1356,5 +1415,8 @@ tr:hover {
   }
   .btn2{
     border: 2px solid var(--primary-color);
+  }
+  .right-contact{
+    transform: translateY(-50%) translateX(0);
   }
 }
