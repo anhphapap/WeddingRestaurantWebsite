@@ -135,26 +135,28 @@ body {
 }
 .card-contact:nth-child(2) a{
   color: #cc39a4;
-  background-color: white;
+}
+.card-contact:nth-child(4) a{
+  color: black;
 }
 .card-contact:nth-child(3) a{
-  color: black;
-  background-color: white;
+  color: red;
 }
-.card-contact:first-child:hover a{
+.card-contact:hover a{
   scale: 1.1;
   color: white;
+}
+.card-contact:first-child:hover a{
   background-color: #0777e9;
 }
 .card-contact:nth-child(2):hover a{
-  scale: 1.1;
-  color: white;
-  background-color: #cc39a4;
+  background: linear-gradient(45deg, #feda75,#fa7e1e,#d62976, #962fbf, #4f5bd5);
+}
+.card-contact:nth-child(4):hover a{
+  background-color: black;
 }
 .card-contact:nth-child(3):hover a{
-  scale: 1.1;
-  color: white;
-  background-color: black;
+  background-color: red;
 }
 
 /* Input box  */
