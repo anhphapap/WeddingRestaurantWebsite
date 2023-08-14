@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sảnh tiệc</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -185,9 +186,16 @@
         <div class="line wow animate__animated animate__fadeInUp">
           <img src="./images/text2-line.png" alt="text2-line" />
         </div>
+        <div class="hall-menu flex">
+          <a class="hall-menu-item">Diamond</a>
+          <a class="hall-menu-item">Gold</a>
+          <a class="hall-menu-item active-menu">Pearl</a>
+          <a class="hall-menu-item">Ruby</a>
+          <a class="hall-menu-item">Sapphire</a>
+        </div>
         <div class="list-hall">
           <div
-            class="hall-item"
+            class="hall-item" id="Diamond"
             style="background-image: url('./images/diamond.jpg')"
           >
             <div class="hall-label">
@@ -207,7 +215,7 @@
             </div>
           </div>
           <div
-            class="hall-item"
+            class="hall-item" id="Gold"
             style="background-image: url('./images/gold.jpg')"
           >
             <div class="hall-label">
@@ -227,7 +235,7 @@
             </div>
           </div>
           <div
-            class="hall-item active-hall"
+            class="hall-item active-hall active-hall-item" id="Pearl"
             style="background-image: url('./images/pearl.jpg')"
           >
             <div class="hall-label">
@@ -247,7 +255,7 @@
             </div>
           </div>
           <div
-            class="hall-item"
+            class="hall-item" id="Ruby"
             style="background-image: url('./images/ruby.jpg')"
           >
             <div class="hall-label">
@@ -267,7 +275,7 @@
             </div>
           </div>
           <div
-            class="hall-item"
+            class="hall-item" id="Sapphire"
             style="background-image: url('./images/sapphire.jpg')"
           >
             <div class="hall-label">
@@ -287,6 +295,14 @@
               </div>
             </div>
           </div>
+        </div>
+        <h4 class="map-title">Sơ đồ sảnh</h4>
+        <div class="hall-map">
+          <img src="./images/Diamond-Map.jpg" alt="">
+          <img src="./images/Gold-Map.jpg" alt="">
+          <img src="./images/Pearl-Map.jpg" alt="">
+          <img src="./images/Ruby-Map.jpg" alt="">
+          <img src="./images/Sapphire-Map.jpg" alt="">
         </div>
       </div>
     </section>

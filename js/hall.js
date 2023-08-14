@@ -123,6 +123,7 @@ window.onload = () => {
 };
 
 $(window).ready(()=>{
+  $(".hall-map>img").eq(2).addClass("active-img");
   $(".hall-item").click(function(){
     if($(this).hasClass("active-hall")){
       $(this).removeClass("active-hall");
@@ -131,6 +132,16 @@ $(window).ready(()=>{
       $(".hall-item").removeClass("active-hall");
       $(this).addClass("active-hall");
     }
+    $(".hall-map>img").removeClass("active-img");
+    $(".hall-map>img").eq($(this).index()).addClass("active-img");
+  })
+  $(".hall-menu-item").click(function(){
+    $(".hall-menu-item").removeClass("active-menu");
+    $(this).addClass("active-menu");
+    $(".hall-item").removeClass("active-hall-item");
+    $(".hall-item").eq($(this).index()).addClass("active-hall-item");
+    $(".hall-map>img").removeClass("active-img");
+    $(".hall-map>img").eq($(this).index()).addClass("active-img");
   })
   $(".select").focus(function(){
     $(".select").parent().css("color","var(--text)");

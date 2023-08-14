@@ -105,6 +105,7 @@ $(window).ready(()=>{
     $(".select").parent().css("color","var(--text)");
     $(this).parent().css("color","var(--text2)");
   })
+  //Slider effect
   let l=$(".slider>img").length;
     let k="";
     for(let i=0;i<l;i++)
