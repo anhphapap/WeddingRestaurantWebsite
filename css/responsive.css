@@ -209,7 +209,7 @@
       width: 95%;
     }
     .hall-item {
-      width: 95%;
+      width: 95% !important;
     }
     .sale-item{
       width: 90%;
@@ -285,9 +285,6 @@
     .active-hall {
       width: 100%;
     }
-    .hall-item {
-      width: 100%;
-    }
     .btn2 {
       font-size: 12px;
     }
@@ -308,6 +305,7 @@
     }
     .hall-item{
         aspect-ratio: 1;
+        width: 98% !important;
     }
   }
   @media screen and (max-width: 900px) {
